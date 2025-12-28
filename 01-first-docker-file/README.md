@@ -34,3 +34,20 @@ docker ps -a
 ```
 
 ---
+
+### CMD in the Dockerfile
+
+`CMD ["python", "hello.py"]` Runs a raw Python script directly when the container starts.
+
+Use when running:
+
+- Simple scripts
+- CLIs
+- cron-job style tasks
+
+Drawbacks:
+
+- Not production-ready for web apps
+- No proper request handling, scaling, concurrency, etc
+
+---
