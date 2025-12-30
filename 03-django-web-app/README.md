@@ -46,7 +46,8 @@ Use when:
 - Need concurrency, performance, stability
 
 > Gunicorn is NOT included with Django. Install separately:
-> `pip install gunicorn`
+> `pip install gunicorn`.
+> (In this example project, it is included in requirements.txt)
 
 ---
 
