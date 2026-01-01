@@ -26,7 +26,7 @@ curl -I http://localhost:3000
 curl -v http://localhost:3000
 ```
 - Using browser:
-go to browser and open http://localhost:3000
+go to http://localhost:3000
 ---
 
 ### Executing commands inside the container
@@ -37,3 +37,10 @@ docker exec -it getting-started-app sh -c "uname -a"
 docker exec -it getting-started-app sh
 ```
 ---
+
+### CMD in the Dockerfile
+`CMD ["node", "src/index.js"]` runs a Node.js application directly using the Node.js runtime.
+
+Use when:
+- You know the entry file
+- Simpler services, small Express projects, basic backends
