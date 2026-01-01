@@ -26,10 +26,17 @@ docker run -it --name go-cal go-cal-multi-stage:V1
 
 ---
 
+### Statically linked binary
+
+A binary that includes all required libraries inside the executable. No external system libs needed. This makes it runnable in a scratch image with no OS. Like packing your entire runtime into one file.
+
+`CGO_ENABLED=0` ensures the binary is fully self-contained.
+
+---
+
 ### Extra Notes
 
 Golang is a statically-typed programming language that does not require a runtime in the traditional sense. Unlike dynamically-typed languages like Python, Ruby, and JavaScript, which rely on a runtime environment to execute their code, Go compiles directly to machine code, which can then be executed directly by the operating system.
 
 So the real advantage of multi stage docker builds can be understood with a drastic decrease in the Image size.
-
 ---
