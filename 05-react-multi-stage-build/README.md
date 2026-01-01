@@ -29,6 +29,6 @@ curl -v http://localhost:8080
 ```
 
 - Using browser
-  go to browser and open http://localhost:3000
+  go to http://localhost:8080
 
 ---
