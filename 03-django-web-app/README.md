@@ -31,6 +31,18 @@ Access the application using curl:
 
 ---
 
+### Executing commands inside the container
+
+```bash
+# getting a bash shell inside the container as the default user in the Dockerfile (appuser)
+docker exec -it django-app bash
+
+# getting a bash shell inside the container as root user
+docker exec -it -u root django-app bash
+```
+
+---
+
 ### CMD in the Dockerfile
 
 `CMD ["gunicorn", "--bind", "0.0.0.0:8000", "devops.wsgi:application"]` runs a production-grade web server for Python web apps (Django/Flask/FastAPI).
