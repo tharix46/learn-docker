@@ -1,4 +1,4 @@
-# WordPress + MySQL using Docker Compose
+# WordPress + MySQL Using Docker Compose
 
 This setup runs **WordPress** with a **MySQL** database using Docker Compose.  
 Data is persisted using **named Docker volumes**.
@@ -12,12 +12,14 @@ Data is persisted using **named Docker volumes**.
 - Image: `wordpress`
 - Port: `8000 → 80`
 - Connects to MySQL via internal Docker network
+- uses environment variables and secrets to configure database connection
 
 ### 2. MySQL
 
 - Image: `mysql:8.0`
 - Database: `wordpress`
 - Data persisted in a named volume
+- uses environment variables and secrets to configure database connection with wordpress service
 
 ---
 
@@ -50,3 +52,9 @@ docker compose down -v
   `curl -I http://localhost:8000`
 
 ---
+
+### Secrets Used
+
+`./mysql_wp_password.txt` and `./mysql_root_password.txt` contain the passwords for the MySQL user and root user respectively.
+
+These files are referenced in the `compose.yml` and not committed to version control for security reasons.
