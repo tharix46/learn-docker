@@ -4,11 +4,13 @@ services:
     ports:
       - 8000:80
     restart: unless-stopped
+    secrets:
+      - mysql_wp_password
     environment:
       WORDPRESS_DB_HOST: mysql
       WORDPRESS_DB_NAME: wordpress
       WORDPRESS_DB_USER: wpuser
-      WORDPRESS_DB_PASSWORD: wppassword
+      WORDPRESS_DB_PASSWORD_FILE: /run/secrets/mysql_wp_password
     networks:
       wp_mysql_net:
     volumes:
@@ -19,11 +21,14 @@ services:
   mysql:
     image: mysql:8.0
     restart: unless-stopped
+    secrets:
+      - mysql_root_password
+      - mysql_wp_password
     environment:
       MYSQL_DATABASE: wordpress
-      MYSQL_ROOT_PASSWORD: password123
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root_password
       MYSQL_USER: wpuser
-      MYSQL_PASSWORD: wppassword
+      MYSQL_PASSWORD_FILE: /run/secrets/mysql_wp_password
     networks:
       wp_mysql_net:
     volumes:
@@ -35,3 +40,9 @@ networks:
 volumes:
   mysql_data:
   wordpress:
+
+secrets:
+  mysql_root_password:
+    file: ./mysql_root_password.txt
+  mysql_wp_password:
+    file: ./mysql_wp_password.txt
