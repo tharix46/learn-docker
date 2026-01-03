@@ -7,8 +7,8 @@ services:
     environment:
       WORDPRESS_DB_HOST: mysql
       WORDPRESS_DB_NAME: wordpress
-      WORDPRESS_DB_USER: root
-      WORDPRESS_DB_PASSWORD: password123
+      WORDPRESS_DB_USER: wpuser
+      WORDPRESS_DB_PASSWORD: wppassword
     networks:
       wp_mysql_net:
     volumes:
@@ -22,6 +22,8 @@ services:
     environment:
       MYSQL_DATABASE: wordpress
       MYSQL_ROOT_PASSWORD: password123
+      MYSQL_USER: wpuser
+      MYSQL_PASSWORD: wppassword
     networks:
       wp_mysql_net:
     volumes:
