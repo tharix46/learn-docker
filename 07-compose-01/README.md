@@ -53,8 +53,10 @@ docker compose down -v
 
 ---
 
-### Secrets Used
+### Secrets
 
 `./mysql_wp_password.txt` and `./mysql_root_password.txt` contain the passwords for the MySQL user and root user respectively.
 
-These files are referenced in the `compose.yml` and not committed to version control for security reasons.
+These files are referenced in the `compose.yaml` and not committed to version control for security reasons.
+
+---
