@@ -1,0 +1,49 @@
+services:
+  redis:
+    container_name: redis
+    restart: on-failure
+    image: "redislabs/redismod"
+    # ports:
+    #   - "6379:6379"
+    expose:
+      - "6379"
+    networks:
+      - app-net
+
+  web1:
+    # setting container names looks good on `docker ps` output but bad for scaling with `docker compose up --scale web1=3`
+    container_name: web1
+    restart: on-failure
+    build: ./web
+    expose:
+      - "5000"
+    # ports:
+    #   - "81:5000"
+    networks:
+      - app-net
+
+  web2:
+    container_name: web2
+    restart: on-failure
+    build: ./web
+    expose:
+      - "5000"
+    # ports:
+    #   - "82:5000"
+    networks:
+      - app-net
+
+  nginx:
+    container_name: nginx
+    restart: on-failure
+    build: ./nginx
+    ports:
+      - "80:80"
+    networks:
+      - app-net
+    depends_on:
+      - web1
+      - web2
+
+networks:
+  app-net:
