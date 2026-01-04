@@ -1,5 +1,6 @@
 services:
   wordpress:
+    container_name: wordpress
     image: wordpress
     ports:
       - 8000:80
@@ -19,6 +20,7 @@ services:
       - mysql
 
   mysql:
+    container_name: mysql
     image: mysql:8.0
     restart: unless-stopped
     secrets:
