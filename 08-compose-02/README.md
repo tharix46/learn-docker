@@ -57,8 +57,10 @@ curl -v http://localhost:80
 
 - web1 and web2 are the names of the services **defined in compose.yaml** and are used by Nginx to route traffic.
 
-- setting container names looks good on `docker ps` output but **bad for scaling** with `docker compose up --scale web1=3`
+- Setting container names looks good on `docker ps` output but **bad for scaling** with `docker compose up --scale web1=3`
 
 - Redis is used as an **in-memory data store** to keep track of the number of visits to the application.
+
+- **Only** the **nginx** service **exposes a port** to the host machine (port 80). The other services (web1, web2, redis) communicate internally within the Docker network. (no access from host)
 
 ---
