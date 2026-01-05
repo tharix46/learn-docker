@@ -30,7 +30,7 @@ docker-compose up -d
 docker-compose ps
 
 docker network ls
-docker inspect app-net
+docker inspect 08-compose-02_app-net
 
 docker-compose down
 ```
@@ -54,6 +54,8 @@ curl -v http://localhost:80
 ### Extra Notes
 
 - Nginx is used as a **reverse proxy and load balancer** to distribute incoming requests to two Node.js application instances (web1 and web2).
+
+- web1 and web2 are the names of the services **defined in compose.yaml** and are used by Nginx to route traffic.
 
 - setting container names looks good on `docker ps` output but **bad for scaling** with `docker compose up --scale web1=3`
 
