@@ -1,0 +1,38 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# build output
+dist
+build
+
+# local env/config
+.env
+.env.*
+.env.local
+
+# test artifacts
+coverage
+cypress
+cypress/*
+cypress.json
+
+# caches & runtime
+.vite
+.cache
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# editor / OS
+.vscode
+.idea
+*.swp
+.DS_Store
+
+# VCS and docker metadata
+.git
+.gitignore
+docker-compose.yaml
