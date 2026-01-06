@@ -83,3 +83,5 @@ go to http://localhost:80 to access the application.
 - Docker Compose is used to orchestrate the multi-container application, making it easy to set up and manage the entire stack with a single command.
 
 - The frontend communicates with the backend using relative URLs, allowing seamless interaction between the two services within the Docker network.
+
+- **Only** the **frontend** service **exposes a port** to the host machine (port 80). The other services (backend, mongodb) communicate internally within the Docker network. (no access from host)
