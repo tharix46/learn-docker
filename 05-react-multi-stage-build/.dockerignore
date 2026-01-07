@@ -1,6 +1,6 @@
 .git
 .gitignore
 .vscode
-.Ds_Store
+.DS_Store
 README.md
 node_modules
