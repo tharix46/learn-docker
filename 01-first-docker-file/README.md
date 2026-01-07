@@ -23,7 +23,7 @@ docker images
 ```bash
 docker run --name hello-world-python hello-py:V1
 
-docker run --rm --name hello-world-python hello-py
+docker run --rm --name hello-world-python hello-py:V1
 
 ```
 
