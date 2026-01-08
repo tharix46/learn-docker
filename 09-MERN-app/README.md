@@ -56,7 +56,9 @@ docker-compose ps
 docker-compose logs -f
 
 docker network ls
-docker inspect 09-mern-app_mern-network
+docker inspect 09-mern-app_backend-net
+docker inspect 09-mern-app_frontend-net
+
 
 docker volume ls
 
