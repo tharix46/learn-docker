@@ -51,9 +51,9 @@ The goal of this project is **hands-on learning and experimentation with dockeri
 ### Docker Commands Used
 
 ```bash
-docker-compose up -d --build
-docker-compose ps
-docker-compose logs -f
+docker compose up -d --build
+docker compose ps
+docker compose logs -f
 
 docker network ls
 docker inspect 09-mern-app_backend-net
@@ -62,7 +62,7 @@ docker inspect 09-mern-app_frontend-net
 
 docker volume ls
 
-docker-compose down -v
+docker compose down -v
 ```
 
 ---
