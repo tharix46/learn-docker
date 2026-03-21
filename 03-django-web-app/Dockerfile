@@ -9,7 +9,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY devops .
 
-RUN adduser --system --group --uid 1000 appuser && \
+RUN adduser --system --group --uid 999 appuser && \
 chown -R appuser:appuser .
 
 USER appuser
