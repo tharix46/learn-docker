@@ -6,6 +6,19 @@ The application serves a basic webpage. The Dockerfile demonstrates how to set u
 
 Application source code is originally from [Abhishek Veeramalla's github](https://github.com/iam-veeramalla/Docker-Zero-to-Hero/tree/main/examples/python-web-app) and has been slightly modified for this example.
 
+---
+
+### Directory Structure in Simple
+
+- devops/ - the core of the Django project
+- devops/devops/ - contains global settings for the entire project
+- devops/devops/wsgi.py - Gunicorn (your web server) uses the wsgi.py file to start the application.
+- devops/demo/ - represents the actual website functionality
+- manage.py - Django's command-line utility for administrative tasks (migrate databases, create admin users)
+- db.sqlite3: A lightweight, file-based database (not for production)
+
+---
+
 ### Docker Commands Used
 
 ```bash
