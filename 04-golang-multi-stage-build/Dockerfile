@@ -10,7 +10,7 @@ ENV GO111MODULE=off
 # build statically linked binary
 RUN CGO_ENABLED=0 go build -o app .
 
-RUN adduser --system --group --uid 1000 appuser
+RUN adduser --system --group --uid 999 appuser
 
 # stage 2: final image
 FROM scratch
