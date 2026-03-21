@@ -72,6 +72,7 @@ Use when:
 
 > Gunicorn is NOT included with Django. Install separately:
 > `pip install gunicorn`.
+>
 > (In this example project, it is included in requirements.txt)
 
 ---
