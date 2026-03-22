@@ -36,3 +36,5 @@ pnpm-debug.log*
 .git
 .gitignore
 docker-compose.yaml
+Dockerfile
+.dockerignore
