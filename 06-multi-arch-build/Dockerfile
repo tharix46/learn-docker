@@ -15,11 +15,9 @@ RUN CGO_ENABLED=0 go build -o app .
 FROM scratch
 
 # copy the compiled binary from the build stage
-# COPY command preserves the file permissions of the source file
-COPY --chown=1000:1000 --from=builder /src/app /app
+COPY --from=builder /src/app /app
 
-# run as numeric UID
-USER 1000
+USER 10001:10001
 
 ENTRYPOINT ["/app"]
 
