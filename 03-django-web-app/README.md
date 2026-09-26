@@ -8,6 +8,10 @@ Application source code is originally from [Abhishek Veeramalla's github](https:
 
 ---
 
+![Django Web App Screenshot](../images/django-app.png)
+
+---
+
 ### Directory Structure in Simple
 
 - devops/ - the core of the Django project
