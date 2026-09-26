@@ -4,6 +4,10 @@ The application code is from **https://github.com/piyushsachdeva/todoapp-docker.
 
 ---
 
+![React Todo App Screenshot](../images/react-todo-app.png)
+
+---
+
 ### Docker Commands Used
 
 ```bash
