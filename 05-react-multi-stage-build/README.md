@@ -9,7 +9,7 @@ The application code is from **https://github.com/piyushsachdeva/todoapp-docker.
 ```bash
 docker build -t react-app:V1 .
 
-docker run -d -p 8080:80 --name react-app react-app:V1
+docker run -d -p 8080:8080 --name react-app react-app:V1
 
 docker exec -it react-app sh
 
