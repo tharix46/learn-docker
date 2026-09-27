@@ -5,6 +5,8 @@ WORKDIR /app
 COPY package*.json .
 RUN npm ci
 
-COPY server.js .
+COPY --chown=node:node server.js .
+
+USER node
 
 CMD ["npm","start"]
