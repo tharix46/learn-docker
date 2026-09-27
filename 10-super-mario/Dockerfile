@@ -12,8 +12,8 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Production (Optimized)
-FROM nginx:alpine
+FROM nginxinc/nginx-unprivileged:alpine
 
 COPY --from=build /app/dist /usr/share/nginx/html
 
-EXPOSE 80
+EXPOSE 8080
