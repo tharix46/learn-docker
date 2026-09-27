@@ -8,7 +8,7 @@ Application source code is originally from [Abhishek Veeramalla's github](https:
 
 Below is a screenshot of the game in action:
 
-![Super Mario Mimic Screenshot](game.png)
+![Super Mario Mimic Screenshot](../images/game.png)
 
 ---
 
