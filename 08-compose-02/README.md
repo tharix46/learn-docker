@@ -42,12 +42,12 @@ docker-compose down
 - Using curl:
 
 ```bash
-curl -I http://localhost:80
-curl -v http://localhost:80
+curl -I http://localhost:8080
+curl -v http://localhost:8080
 ```
 
 - Using browser:
-  go to http://localhost:80 and refresh multiple times to see the visit count increasing.
+  go to http://localhost:8080 and refresh multiple times to see the visit count increasing.
 
 ---
 
@@ -61,6 +61,6 @@ curl -v http://localhost:80
 
 - Redis is used as an **in-memory data store** to keep track of the number of visits to the application.
 
-- **Only** the **nginx** service **exposes a port** to the host machine (port 80). The other services (web1, web2, redis) communicate internally within the Docker network. (no access from host)
+- **Only** the **nginx** service **exposes a port** to the host machine (port 8080). The other services (web1, web2, redis) communicate internally within the Docker network. (no access from host)
 
 ---
