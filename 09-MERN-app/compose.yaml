@@ -10,14 +10,14 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "80:80"
+      - "8080:8080"
     networks:
       - frontend-net
     depends_on:
       - backend
 
   mongodb:
-    image: mongo:latest
+    image: mongo:7.0
     networks:
       - backend-net
     volumes:
