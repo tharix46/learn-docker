@@ -1,0 +1,7 @@
+.git
+.gitignore
+.vscode
+.DS_Store
+README.md
+Dockerfile
+.dockerignore
