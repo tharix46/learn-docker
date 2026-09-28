@@ -9,4 +9,4 @@ COPY --chown=node:node server.js .
 
 USER node
 
-CMD ["npm","start"]
+CMD ["node", "server.js"]
