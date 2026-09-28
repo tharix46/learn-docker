@@ -6,6 +6,10 @@ The goal of this project is **hands-on learning and experimentation with Docker 
 
 ---
 
+![Nginx Node Redis Screenshot](../images/compose-02.png)
+
+---
+
 ### Project Structure
 
 ```
@@ -26,13 +30,13 @@ The goal of this project is **hands-on learning and experimentation with Docker 
 ### Docker Commands Used
 
 ```bash
-docker-compose up -d
-docker-compose ps
+docker compose up -d
+docker compose ps
 
 docker network ls
 docker inspect 08-compose-02_app-net
 
-docker-compose down
+docker compose down
 ```
 
 ---
