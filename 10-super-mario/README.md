@@ -46,7 +46,7 @@ docker build -t tharix46/super-mario-mimic:V1 .
 
 docker images
 
-docker run -d --name super-mario-mimic -p 80:80 tharix46/super-mario-mimic:V1
+docker run -d --name super-mario-mimic -p 8080:8080 tharix46/super-mario-mimic:V1
 
 docker ps
 ```
@@ -56,6 +56,6 @@ docker ps
 ### Accessing the Application
 
 Using browser:
-go to http://localhost:80
+go to http://localhost:8080
 
 ---
