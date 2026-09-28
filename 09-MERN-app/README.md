@@ -6,6 +6,10 @@ The goal of this project is **hands-on learning and experimentation with dockeri
 
 ---
 
+![MERN App Screenshot](../images/mern.png)
+
+---
+
 ### Project Structure
 
 ```
@@ -70,7 +74,7 @@ docker compose down -v
 ### Accessing the Application
 
 Using browser:
-go to http://localhost:80 to access the application.
+go to http://localhost:8080 to access the application.
 
 ---
 
@@ -86,6 +90,6 @@ go to http://localhost:80 to access the application.
 
 - The frontend communicates with the backend using relative URLs, allowing seamless interaction between the two services within the Docker network.
 
-- **Only** the **frontend** service **exposes a port** to the host machine (port 80). The other services (backend, mongodb) communicate internally within the Docker network. (no access from host)
+- **Only** the **frontend** service **exposes a port** to the host machine (port 8080). The other services (backend, mongodb) communicate internally within the Docker network. (no access from host)
 
 ---
