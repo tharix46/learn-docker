@@ -1,5 +1,6 @@
 .DS_Store
 .vscode/
 node_modules/
+__pycache__/
 todo.txt
 07-compose-01/mysql*
